@@ -23,7 +23,7 @@ Before running the script, ensure you have the following prerequisites set up:
 
 ## Configuration
 
-Create a `[config.properties](https://github.com/Khushi090/Bash_scripts/blob/main/CPU_Utilization/config.properties)` file in the same directory as the script with the following content:
+Create a [config.properties](https://github.com/Khushi090/Bash_scripts/blob/main/CPU_Utilization/config.properties) file in the same directory as the script with the following content:
 
 ```properties
 AWS_PROFILE=("default" "chanderkant")
