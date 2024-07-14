@@ -30,7 +30,7 @@ AWS_PROFILE=("default" "chanderkant")
 REGION=("us-east-1" "us-west-2" "eu-west-1")
 ```
 
-## Script Explanation
+## [Script Explanation](https://github.com/Khushi090/Bash_scripts/blob/main/CPU_Utilization/cpu.sh)
 
 The script consists of the following parts:
 
