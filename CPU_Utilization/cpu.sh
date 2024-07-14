@@ -12,13 +12,13 @@ fi
 read -p "Enter the start date (YYYY-MM-DD): " START_DATE
 read -p "Enter the end date (YYYY-MM-DD): " END_DATE
 
-# Check if START_DATE and END_DATE are provided
+
 if [ -z "$START_DATE" ] || [ -z "$END_DATE" ]; then
   echo "Start date and end date are required."
   exit 1
 fi
 
-# Ensure AWS_PROFILE and REGION are arrays
+
 if [ -z "${AWS_PROFILE}" ]; then
   echo "AWS_PROFILE not set in config.properties"
   exit 1
@@ -50,7 +50,7 @@ for PROFILE in "${AWS_PROFILES[@]}"; do
     echo "Using region: $REGION"
     echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
 
-    # Debug: Print the current AWS profile and region
+    
     echo "Debug: AWS_PROFILE=$AWS_PROFILE, REGION=$REGION"
 
     get_cpu_utilization() {
@@ -78,7 +78,7 @@ for PROFILE in "${AWS_PROFILES[@]}"; do
     declare -a instance_ids_array
     instance_ids_array=($INSTANCE_IDS)
 
-    # Debug: Print the instance IDs found
+    
     echo "Debug: Instance IDs found in profile $AWS_PROFILE and region $REGION: ${instance_ids_array[@]}"
 
     if [ ${#instance_ids_array[@]} -eq 0 ]; then
@@ -93,7 +93,7 @@ for PROFILE in "${AWS_PROFILES[@]}"; do
         echo "Instance ID   :- $id"
         get_instance_info $id
         
-        # Calculate the total average for this instance
+        
         total_sum=0
         total_count=0
         IFS=$'\n' read -r -d '' -a cpu_array <<< "$CPU_UTIL"
